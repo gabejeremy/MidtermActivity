@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager - Login</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="min-h-screen flex flex-col lg:flex-row">
+        <!-- Hero Section -->
+        <div class="lg:flex-1 bg-primary p-8 lg:p-60 text-white flex flex-col justify-between">
+            <div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6">Contact Manager</h1>
+                <p class="text-lg lg:text-xl opacity-90 max-w-lg">
+                    Streamline your contact management with our powerful Google Contacts integration. 
+                    Keep your connections organized and accessible from anywhere.
+                </p>
+            </div>
+            
+            <div class="hidden lg:block space-y-8">
+                <div class="flex items-start gap-4">
+                    <div class="p-2 bg-white/10 rounded-lg">
+                        <i class="ph ph-user-circle text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium mb-1">Seamless Integration</h3>
+                        <p class="opacity-80">Connect directly with your Google Contacts for effortless synchronization</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <div class="p-2 bg-white/10 rounded-lg">
+                        <i class="ph ph-shield-check text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium mb-1">Secure Access</h3>
+                        <p class="opacity-80">Your data is protected with industry-standard security measures</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <div class="p-2 bg-white/10 rounded-lg">
+                        <i class="ph ph-devices text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium mb-1">Access Anywhere</h3>
+                        <p class="opacity-80">Manage your contacts from any device, anytime</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Section -->
+        <div class="lg:flex-1 p-8 lg:p-12 flex items-center justify-center">
+            <div class="w-full max-w-md space-y-8">
+                <div class="text-center lg:text-left">
+                    <h2 class="text-2xl font-bold text-gray-900">Welcome to Contact Manager</h2>
+                    <p class="mt-2 text-gray-600">Sign in with your Google account to continue</p>
+                </div>
+
+                <div class="mt-8">
+                    <a href="/oauth2/authorization/google" 
+                       class="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white hover:bg-gray-50 transition-colors">
+                        <img src="https://www.google.com/favicon.ico" alt="Google" class="w-5 h-5">
+                        <span class="text-gray-700 font-medium">Continue with Google</span>
+                    </a>
+                </div>
+
+                <div class="mt-6 text-center text-sm text-gray-500">
+                    By continuing, you agree to our 
+                    <a href="#" class="text-primary hover:text-blue-700">Terms of Service</a> and 
+                    <a href="#" class="text-primary hover:text-blue-700">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Features Section -->
+    <div class="lg:hidden bg-white py-12 px-8 space-y-8">
+        <div class="flex items-start gap-4">
+            <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                <i class="ph ph-user-circle text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-medium text-gray-900 mb-1">Seamless Integration</h3>
+                <p class="text-gray-600">Connect directly with your Google Contacts for effortless synchronization</p>
+            </div>
+        </div>
+        
+        <div class="flex items-start gap-4">
+            <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                <i class="ph ph-shield-check text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-medium text-gray-900 mb-1">Secure Access</h3>
+                <p class="text-gray-600">Your data is protected with industry-standard security measures</p>
+            </div>
+        </div>
+        
+        <div class="flex items-start gap-4">
+            <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                <i class="ph ph-devices text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-medium text-gray-900 mb-1">Access Anywhere</h3>
+                <p class="text-gray-600">Manage your contacts from any device, anytime</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

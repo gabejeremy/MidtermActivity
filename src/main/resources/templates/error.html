@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager - Error</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="min-h-screen flex flex-col lg:flex-row">
+        <!-- Hero Section -->
+        <div class="lg:flex-1 bg-primary p-8 lg:p-60 text-white flex flex-col justify-between">
+            <div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6">Oops! Something went wrong</h1>
+                <p class="text-lg lg:text-xl opacity-90 max-w-lg">
+                    We encountered an error while processing your request. Don't worry, you can try again or contact support if the issue persists.
+                </p>
+            </div>
+            
+            <div class="hidden lg:block space-y-8">
+                <div class="flex items-start gap-4">
+                    <div class="p-2 bg-white/10 rounded-lg">
+                        <i class="ph ph-arrow-counter-clockwise text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium mb-1">Try Again</h3>
+                        <p class="opacity-80">Return to the previous page and try your action again</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <div class="p-2 bg-white/10 rounded-lg">
+                        <i class="ph ph-sign-in text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium mb-1">Sign In Again</h3>
+                        <p class="opacity-80">If the error persists, try signing out and back in</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <div class="p-2 bg-white/10 rounded-lg">
+                        <i class="ph ph-chat-centered-dots text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium mb-1">Contact Support</h3>
+                        <p class="opacity-80">Still having issues? Our support team is here to help</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Details Section -->
+        <div class="lg:flex-1 p-8 lg:p-12 flex items-center justify-center">
+            <div class="w-full max-w-md space-y-8">
+                <div class="text-center lg:text-left">
+                    <h2 class="text-2xl font-bold text-gray-900">Error Details</h2>
+                    <p class="mt-2 text-gray-600" th:text="${error}">An unexpected error occurred</p>
+                    <p class="mt-2 text-sm text-gray-500" th:if="${timestamp}" th:text="${'Time: ' + timestamp}"></p>
+                    <p class="mt-2 text-sm text-gray-500" th:if="${status}" th:text="${'Status: ' + status}"></p>
+                    <p class="mt-2 text-sm text-gray-500" th:if="${path}" th:text="${'Path: ' + path}"></p>
+                </div>
+
+                <div class="mt-8 space-y-4">
+                    <a href="javascript:history.back()" 
+                       class="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white hover:bg-gray-50 transition-colors">
+                        <i class="ph ph-arrow-left"></i>
+                        <span class="text-gray-700 font-medium">Go Back</span>
+                    </a>
+                    
+                    <a href="/" 
+                       class="w-full flex items-center justify-center gap-3 px-4 py-3 bg-primary text-white rounded-lg shadow-sm hover:bg-blue-700 transition-colors">
+                        <i class="ph ph-house"></i>
+                        <span class="font-medium">Return Home</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Features Section -->
+    <div class="lg:hidden bg-white py-12 px-8 space-y-8">
+        <div class="flex items-start gap-4">
+            <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                <i class="ph ph-arrow-counter-clockwise text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-medium text-gray-900 mb-1">Try Again</h3>
+                <p class="text-gray-600">Return to the previous page and try your action again</p>
+            </div>
+        </div>
+        
+        <div class="flex items-start gap-4">
+            <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                <i class="ph ph-sign-in text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-medium text-gray-900 mb-1">Sign In Again</h3>
+                <p class="text-gray-600">If the error persists, try signing out and back in</p>
+            </div>
+        </div>
+        
+        <div class="flex items-start gap-4">
+            <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                <i class="ph ph-chat-centered-dots text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-medium text-gray-900 mb-1">Contact Support</h3>
+                <p class="text-gray-600">Still having issues? Our support team is here to help</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
